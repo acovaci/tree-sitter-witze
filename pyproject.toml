@@ -18,7 +18,7 @@ license.text = "MIT"
 name = "tree-sitter-witze"
 readme = "README.md"
 requires-python = ">=3.10"
-version = "0.0.1"
+version = "0.0.3"
 
 [project.urls]
 Funding = "https://github.com/acovaci/tree-sitter-witze"
