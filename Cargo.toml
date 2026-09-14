@@ -9,7 +9,7 @@ license = "MIT"
 name = "tree-sitter-witze"
 readme = "README.md"
 repository = "https://github.com/acovaci/tree-sitter-witze"
-version = "0.0.3"
+version = "0.1.0"
 
 build = "bindings/rust/build.rs"
 include = [ "bindings/rust/*", "grammar.js", "queries/*", "src/*", "tree-sitter.json", "/LICENSE" ]
