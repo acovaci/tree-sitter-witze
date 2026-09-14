@@ -25,6 +25,15 @@ jobs:
       - name: Bump version file
         run: echo "${{ inputs.version }}" > version.txt
 
+      - name: Bump version on each package
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          jq --arg v "$VERSION" '.version = $v' package.json > tmp.json && mv tmp.json package.json
+          jq --arg v "$VERSION" '.metadata.version = $v' package.json > tmp.json && mv tmp.json package.json
+          sed -i "0,/^version = \"[^\"]*\"/s//version = \"$VERSION\"/" Cargo.toml
+          sed -i "0,/^version = \"[^\"]*\"/s//version = \"$VERSION\"/" pyproject.toml
+
       - name: Open release pull request
         uses: peter-evans/create-pull-request@v8
         with:
