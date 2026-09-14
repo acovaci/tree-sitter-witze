@@ -1,0 +1,30 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools>=62.4.0", "wheel" ]
+
+[project]
+authors = [ { email = "6562353+acovaci@users.noreply.github.com", name = "Adrian Covaci" } ]
+classifiers = [
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Compilers",
+  "Topic :: Text Processing :: Linguistic",
+  "Typing :: Typed",
+]
+description = "Tree-sitter grammar for Witze, a language similar to the scripting language used by the Clausewitz game engine"
+keywords = [ "incremental", "parsing", "tree-sitter", "witze" ]
+license.text = "MIT"
+name = "tree-sitter-witze"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "0.0.1"
+
+[project.urls]
+Funding = ""
+Homepage = "https://github.com/acovaci/tree-sitter-witze"
+
+[project.optional-dependencies]
+core = [ "tree-sitter~=0.24" ]
+
+[tool.cibuildwheel]
+build = "cp310-*"
+build-frontend = "build"

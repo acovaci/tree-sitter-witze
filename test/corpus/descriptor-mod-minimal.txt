@@ -1,0 +1,16 @@
+======================
+Minimal mod descriptor
+======================
+
+version="0.1"
+
+---
+
+(source_file
+  (content_file
+    (definition
+      (identifier)
+      (string)
+    )
+  )
+)

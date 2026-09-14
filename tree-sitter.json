@@ -1,0 +1,42 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "witze",
+      "camelcase": "Witze",
+      "title": "Witze",
+      "scope": "source.witze",
+      "file-types": [
+        ".witze"
+      ],
+      "injection-regex": "^witze$",
+      "class-name": "TreeSitterWitze"
+    }
+  ],
+  "metadata": {
+    "version": "0.0.1",
+    "license": "MIT",
+    "description": "Tree-sitter grammar for Witze, a language similar to the scripting language used by the Clausewitz game engine",
+    "authors": [
+      {
+        "name": "Adrian Covaci",
+        "email": "6562353+acovaci@users.noreply.github.com",
+        "url": "https://adriancovaci.dev"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/acovaci/tree-sitter-witze",
+      "funding": ""
+    }
+  },
+  "bindings": {
+    "c": false,
+    "go": false,
+    "java": false,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": false,
+    "zig": false
+  }
+}

@@ -1,0 +1,4 @@
+config:
+  MD013: false # Prettier already handles line length
+  MD024: false # Changelog contains duplicate headers
+  MD028: false # Don't break GitHub-style notices

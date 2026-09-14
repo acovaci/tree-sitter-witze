@@ -1,0 +1,34 @@
+name: Prepare release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to release (e.g. 1.4.0)"
+        required: true
+
+jobs:
+  prepare-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Update changelog
+        uses: thomaseizinger/keep-a-changelog-new-release@v3
+        with:
+          version: ${{ inputs.version }}
+
+      - name: Bump version file
+        run: echo "${{ inputs.version }}" > version.txt
+
+      - name: Open release pull request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.RELEASE_TOKEN }}
+          branch: release/${{ inputs.version }}
+          title: "Release ${{ inputs.version }}"
+          commit-message: "chore: release ${{ inputs.version }}"
+          body: "Automated release preparation for ${{ inputs.version }}."

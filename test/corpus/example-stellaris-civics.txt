@@ -1,0 +1,147 @@
+=====================================
+Stellaris > Modding tutorial > Civics
+=====================================
+
+civic_beacon_of_liberty = {
+ 	potential = {
+ 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+ 		authority = { NOT = { value = auth_corporate } }
+ 	}
+ 	possible = {
+ 		authority = {
+ 			value = auth_democratic
+ 		}
+ 		ethics = {
+ 			OR = {
+ 				text = civic_tooltip_egalitarian
+ 				value = ethic_egalitarian
+ 				value = ethic_fanatic_egalitarian
+ 			}
+ 			NOR = {
+ 				text = civic_tooltip_not_xenophobe
+ 				value = ethic_xenophobe
+ 				value = ethic_fanatic_xenophobe
+ 			}
+ 		}
+ 	}
+ 	random_weight = { base = 5 }
+ 	modifier = {
+ 		country_unity_produces_mult = 0.15
+ 	}
+}
+
+---
+
+(source_file
+  (content_file
+    (definition
+      (identifier)
+      (predicate
+        (definition
+          (identifier)
+          (predicate
+            (definition
+              (identifier)
+              (predicate
+                (definition
+                  (logical_operator)
+                  (predicate
+                    (definition
+                      (identifier)
+                      (identifier)
+                    )
+                  )
+                )
+              )
+            )
+            (definition
+              (identifier)
+              (predicate
+                (definition
+                  (logical_operator)
+                  (predicate
+                    (definition
+                      (identifier)
+                      (identifier)
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+        (definition
+          (identifier)
+          (predicate
+            (definition
+              (identifier)
+              (predicate
+                (definition
+                  (identifier)
+                  (identifier)
+                )
+              )
+            )
+            (definition
+              (identifier)
+              (predicate
+                (definition
+                  (logical_operator)
+                  (predicate
+                    (definition
+                      (identifier)
+                      (identifier)
+                    )
+                    (definition
+                      (identifier)
+                      (identifier)
+                    )
+                    (definition
+                      (identifier)
+                      (identifier)
+                    )
+                  )
+                )
+                (definition
+                  (logical_operator)
+                  (predicate
+                    (definition
+                      (identifier)
+                      (identifier)
+                    )
+                    (definition
+                      (identifier)
+                      (identifier)
+                    )
+                    (definition
+                      (identifier)
+                      (identifier)
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+        (definition
+          (identifier)
+          (predicate
+            (definition
+              (identifier)
+              (integer)
+            )
+          )
+        )
+        (definition
+          (identifier)
+          (predicate
+            (definition
+              (identifier)
+              (decimal)
+            )
+          )
+        )
+      )
+    )
+  )
+)

@@ -1,0 +1,41 @@
+==================================================================
+Stellaris > Modding tutorial > Localisation > Brazilian portuguese
+==================================================================
+
+l_braz_por:
+
+  tutmod_civic:0 "Semper Exploro"
+  tutmod_civic_desc:0 "This society prioritised scientific exploration over military expansion in the early space age."
+  tutmod_civic_effects:0 "Start with a $science$ and assigned $scientist$ instead of $OUTLINER_FLEETS$."
+
+---
+
+(source_file
+  (localisation_file
+    (language_localisation
+      (language_identifier)
+      (localisation_definition
+        (identifier)
+        (localisation_string)
+      )
+      (localisation_definition
+        (identifier)
+        (localisation_string)
+      )
+      (localisation_definition
+        (identifier)
+        (localisation_string
+          (interpolation
+            (identifier)
+          )
+          (interpolation
+            (identifier)
+          )
+          (interpolation
+            (identifier)
+          )
+        )
+      )
+    )
+  )
+)

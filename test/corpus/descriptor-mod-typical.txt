@@ -1,0 +1,42 @@
+======================
+Typical mod descriptor
+======================
+
+version="0.1"
+tags={
+  "Anomalies"
+  "Gameplay"
+}
+name="Typical Mod"
+supported_version="1.0.*"
+path="C:/Users/Someone/Documents/Paradox Interactive/Game/mod/typical_mod"
+
+---
+
+(source_file
+  (content_file
+    (definition
+      (identifier)
+      (string)
+    )
+    (definition
+      (identifier)
+      (collection
+        (string)
+        (string)
+      )
+    )
+    (definition
+      (identifier)
+      (string)
+    )
+    (definition
+      (identifier)
+      (string)
+    )
+    (definition
+      (identifier)
+      (string)
+    )
+  )
+)
