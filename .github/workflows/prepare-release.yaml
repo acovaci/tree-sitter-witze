@@ -19,7 +19,7 @@ jobs:
       - name: Update changelog
         uses: thomaseizinger/keep-a-changelog-new-release@v3
         with:
-          version: ${{ inputs.version }}
+          version: v${{ inputs.version }}
 
       - name: Bump version file
         run: echo "${{ inputs.version }}" > version.txt
