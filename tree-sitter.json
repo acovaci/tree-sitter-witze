@@ -14,7 +14,7 @@
     }
   ],
   "metadata": {
-    "version": "0.0.3",
+    "version": "0.1.0",
     "license": "MIT",
     "description": "Tree-sitter grammar for Witze, a language similar to the scripting language used by the Clausewitz game engine",
     "authors": [
