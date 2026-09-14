@@ -30,7 +30,7 @@ jobs:
           VERSION: ${{ inputs.version }}
         run: |
           jq --arg v "$VERSION" '.version = $v' package.json > tmp.json && mv tmp.json package.json
-          jq --arg v "$VERSION" '.metadata.version = $v' package.json > tmp.json && mv tmp.json package.json
+          jq --arg v "$VERSION" '.metadata.version = $v' tree-sitter.json > tmp.json && mv tmp.json tree-sitter.json
           sed -i "0,/^version = \"[^\"]*\"/s//version = \"$VERSION\"/" Cargo.toml
           sed -i "0,/^version = \"[^\"]*\"/s//version = \"$VERSION\"/" pyproject.toml
 
